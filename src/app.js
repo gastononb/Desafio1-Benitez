@@ -2,6 +2,7 @@ import express from "express"
 import cartsViewsRouter from "./routers/cartViewsRouter.js"
 import productRouter from "./routers/productRouter.js"
 import cartRouter from "./routers/cartRouter.js"
+import mockingRouter from "./routers/mockingRouter.js"
 import handlebars from "express-handlebars"
 import path from "path"
 import dbConect from "./configuration/serverConfiguration.js"
@@ -49,6 +50,7 @@ app.use('/api/products', productRouter);
 app.use('/api/carts', cartRouter);
 app.use("/carts", cartsViewsRouter);
 app.use('/', viewRouter);
+app.use("/", mockingRouter)
 
 dbConect()
 

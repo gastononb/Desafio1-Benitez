@@ -1,0 +1,18 @@
+<h1>Mocking de productos </h1> 
+<div class="divHome">
+
+{{#each products}}
+    <div class="card carta" style="width: 18rem;">
+      <img class="card-img-top" src="{{this.thumbnail}}" alt="{{this.title}}">
+      <div class="card-body">
+        <h2>{{this.title}}</h2>
+        <p>Description: {{this.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush listaUl">
+        <li class="list-group-item listaLi">Price: ${{this.price}}</li>
+        <li class="list-group-item listaLi">Category: {{this.category}}</li>
+        <li class="list-group-item listaLi">Code: {{this.code}}</li>
+        <li class="list-group-item listaLi">Stock: {{this.stock}}</li>
+      </ul>
+</div>
+  {{/each}} </div>
